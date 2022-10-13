@@ -24,6 +24,7 @@ public class UserServiceImplementation implements UserService {
 	}
 
 	//UserDto is the object that you get from the client
+	//User entity is towards the server side and UserDto is towards the client side
 
 	@Override
 	public UserDto updateUser(UserDto userDtoObj, int id) {
