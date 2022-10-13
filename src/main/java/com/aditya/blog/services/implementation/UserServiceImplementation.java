@@ -8,9 +8,20 @@ import com.aditya.blog.exceptions.ResourceNotFoundException;
 import com.aditya.blog.payloads.UserDto;
 import com.aditya.blog.repositories.UserRepo;
 import com.aditya.blog.services.UserService;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+
+@NoArgsConstructor
+@Service
 public class UserServiceImplementation implements UserService {
 
+	public UserServiceImplementation(UserRepo userRepoObj) {
+		this.userRepoObj = userRepoObj;
+	}
+
+	@Autowired
 	private UserRepo userRepoObj;
 	
 	@Override
